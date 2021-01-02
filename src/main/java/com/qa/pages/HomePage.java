@@ -1,5 +1,6 @@
 package com.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,7 +25,13 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='catalogue-title-grid']")
     private List<WebElement> catalogueProdcutName;
 
+    @FindBy(xpath = "//input[@type='search']")
+    private WebElement searchBox;
+
+    String productname;
+
     public boolean isLogoPresent(){
+        waitForElementVisibility(hompageLogo);
         try{
             if(hompageLogo.isDisplayed()){
                 return true;
@@ -38,14 +45,21 @@ public class HomePage extends BasePage {
 
     }
 
-    public HomePage getCompanyName(){
-        companyName.getText();
-        return this;
+    public String getCompanyName(){
+        waitForElementVisibility(companyName);
+       return companyName.getText();
     }
 
-    public HomePage getCatalogCount(){
-       catalogueCount.getText();
-        return this;
+    public String getCatalogCount(){
+        waitForElementVisibility(catalogueCount);
+       return catalogueCount.getText();
+
+    }
+
+    public CataloguePage selectProduct(String data){
+        String dataxpath = "//a[contains(text(),'"+data+"')]";
+        driver.findElement(By.xpath(dataxpath)).click();
+        return new CataloguePage(driver);
     }
 
     public CataloguePage selectCatalog(int index){
@@ -61,19 +75,32 @@ public class HomePage extends BasePage {
 
     }
 
-    public HomePage getPrdouctCount(int index){
+    public String getPrdouctCount(int index){
+
         int productItems = productCount.size();
         for (int i=0;i<productItems;i++){
-             productCount.get(index).getText();
+            return productCount.get(index).getText();
         }
-        return this;
+
+        return null;
     }
 
-    public HomePage getCatalogueTitle(int index){
+    public String getCatalogueTitle(int index){
         int catalogueName = catalogueProdcutName.size();
         for (int i=0;i<catalogueName;i++){
-            catalogueProdcutName.get(index).getText();
+             productname = catalogueProdcutName.get(index).getText();
+            if(productname.equals(productname)){
+                return productname;
+                }
+            break;
         }
-        return this;
+        return null;
     }
+
+    public SearchPage clickOnSearch(){
+        waitForElementVisibility(searchBox);
+        clickElement(searchBox);
+       return new SearchPage(driver);
+    }
+
 }

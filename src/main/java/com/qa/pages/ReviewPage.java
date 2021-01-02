@@ -36,43 +36,42 @@ public class ReviewPage extends BasePage {
     @FindBy(xpath = "//span[@class='final-price']")
     private WebElement reviewFinalPrice;
 
-    public ReviewPage getReviewTitle(){
-        reviewTitle.getText();
-        return this;
+    public String getReviewTitle(){
+       return reviewTitle.getText();
+
     }
-    public ReviewPage getReviewOrderTitle(){
-        orderTitle.getText();
-        return this;
+    public String getReviewOrderTitle(){
+       return orderTitle.getText();
+
     }
 
-    public ReviewPage getProductname(){
-        reviewProductName.getText();
-        return this;
+    public String getProductname(){
+        return reviewProductName.getText();
+
     }
-    public ReviewPage getProductColor(){
-        reviewColor.getText();
-        return this;
+    public String getProductColor(){
+        return reviewColor.getText();
+
     }
-    public ReviewPage getProductSize(){
-        reviewSize.getText();
-        return this;
+    public String getProductSize(){
+        return reviewSize.getText();
+
     }
 
-    public ReviewPage getDiscountPrice(){
+    public String getDiscountPrice(){
         if(reviewDiscountprice.isDisplayed()){
-            reviewDiscountprice.getText();
+           return reviewDiscountprice.getText();
         }else {
             System.out.println("Selected Product doesn't have discount price");
         }
-        return this;
+
+        return null;
     }
 
-    public ReviewPage getFinalprice(){
-        reviewFinalPrice.getText();
-        return this;
+    public String getFinalprice(){
+       return reviewFinalPrice.getText();
+
     }
-
-
 
     public boolean isProductImagePresent(){
         if(productImage.isDisplayed()){

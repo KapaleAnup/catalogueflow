@@ -12,6 +12,12 @@ public class ProductPage extends BasePage{
     @FindBy(className = "add-to-list-action")
     private WebElement btnAddTolist;
 
+    @FindBy(xpath = "(//div[@class='label'])[1]")
+    private WebElement lableColor;
+
+    @FindBy(xpath = "(//div[@class='label'])[2]")
+    private WebElement labelSize;
+
     @FindBy(xpath = "//div[@class='button ']")
     private WebElement btnCart;
 
@@ -25,27 +31,38 @@ public class ProductPage extends BasePage{
     private WebElement cartCount;
 
 
-    public ProductPage addCartToList(){
+    public void addCartToList(){
         waitForElementVisibility(btnAddTolist);
-        clickElement(btnAddTolist);
-        return this;
+        if(btnAddTolist.isDisplayed())
+        {
+            clickElement(btnAddTolist);
+        }else {
+            System.out.println("Button is not present");
+        }
     }
 
-    public ProductPage enterMobileNumber(String number){
+    public String enterMobileNumber(String number){
         waitForElementVisibility(inputMobileNo);
         writeText(inputMobileNo,number);
-        return this;
+
+        return number;
     }
 
-    public ProductPage addMobileNumber(){
+    public void addMobileNumber(){
         waitForElementVisibility(addTocartMobileNo);
         clickElement(addTocartMobileNo);
-        return this;
     }
 
-    public ProductPage getCartCount(){
-        readText(cartCount);
-        return this;
+    public String getCartCount(){
+        return cartCount.getText();
+    }
+
+    public String getColor(){
+        return lableColor.getText();
+    }
+
+    public String getSize(){
+        return labelSize.getText();
     }
 
     public ReviewPage clickOnCartButton(){

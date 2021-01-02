@@ -25,7 +25,7 @@ public class CataloguePage extends BasePage{
     private List<WebElement>discountBadge;
     @FindBy(xpath = "//div[@class='countOfAvailableColors']")
     private List<WebElement>colorCount;
-    @FindBy(xpath = "//div[@class='price']")
+    @FindBy(xpath = "(//div[@class='price']//span)[1]")
     private List<WebElement>productPrice;
     @FindBy(xpath = "//div[@class='picture-count']")
     private List<WebElement>pictureCount;
@@ -35,33 +35,26 @@ public class CataloguePage extends BasePage{
     @FindBy(xpath = "//div[@class='home-product-row']//a")
     private List<WebElement>productlist;
 
-    public CataloguePage getPageTitle(){
-
-        driver.getTitle();
-        return this;
+    public String getPageTitle(){
+       return driver.getTitle();
     }
-    public CataloguePage getCatalogueTitle(){
-        String title = catalogueName.getText();
-        System.out.println("Catalogue Title is :" + title);
-        return this;
+    public String getCatalogueTitle(){
+        waitForElementVisibility(catalogueName);
+        return catalogueName.getText();
+    }
+    public String getCatalogueCount(){
+        return catalogueCount.getText();
+    }
+    public void downloadPDF(){
+        clickElement(downloadPDF);
     }
 
-    public CataloguePage getCatalogueCount(){
-
-        String count = catalogueCount.getText();
-        System.out.println("Catalogue Page count is :" + count);
-        return this;
-    }
-    public void downloadPDF(){ clickElement(downloadPDF); }
-
-    public CataloguePage checkDiscountBadge(int index){
+    public String checkDiscountBadge(){
         int discountBadgecount = discountBadge.size();
         try {
             for(int i=0;i<discountBadgecount;i++) {
                 if (discountBadge.get(i).isDisplayed()){
-                    String discountBadgeDisc = discountBadge.get(index).getText();
-                    System.out.println("Badge discount description is : "+discountBadgeDisc);
-                    break;
+                    return discountBadge.get(i).getText();
                 }else if(!discountBadge.get(i).isDisplayed()){
                     System.out.println("No DiscountBadge is available.");
                 }
@@ -69,50 +62,46 @@ public class CataloguePage extends BasePage{
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return this;
-
+        return null;
     }
 
-    public CataloguePage getCountOfColors(int index){
+    public String getCountOfColors(){
         int color = colorCount.size();
-        for (int i=0;i<color;i++){
-            if (colorCount.get(i).isDisplayed()) {
-                String colorData = colorCount.get(index).getText();
-                System.out.println("color count is :" + color);
-                break;
+        try {
+            for (int i=0;i<color;i++){
+                if (colorCount.get(i).isDisplayed()) {
+                    return colorCount.get(i).getText();
+                }
+                else {
+                    System.out.println("Colors are not available.");
+                }
             }
-            else {
-                System.out.println("Colors are not available.");
-            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
-        return this;
+
+        return null;
     }
 
-    public CataloguePage getPrice(int index){
+    public String getPrice(){
         int price = productPrice.size();
-
         for (int i = 0; i < price; i++) {
             if (productPrice.get(i).isDisplayed()) {
-                String priceData = productPrice.get(i).getText();
-                System.out.println("Price Data :" + priceData);
-                break;
+              return productPrice.get(i).getText();
             }else {
                 System.out.println("Prices are not available.");
             }
         }
-
-        return this;
+        return null;
     }
 
-    public CataloguePage getPhotoCount(int index){
+    public String getPhotoCount(){
         int photocount = pictureCount.size();
         try {
             for(int i=0;i<photocount;i++) {
                 if (pictureCount.get(i).isDisplayed()){
-                    String photo = pictureCount.get(i).getText();
-                    System.out.println("photo count is : "+photo);
-                    break;
+                   return pictureCount.get(i).getText();
+
                 }else {
                     System.out.println("No photo available.");
                 }
@@ -121,15 +110,15 @@ public class CataloguePage extends BasePage{
             e.printStackTrace();
         }
 
-        return this;
 
+        return null;
     }
-    public ProductPage addToCart(int index){
+    public ProductPage addToCart(){
         int addTocart = btnAddToCart.size();
         try {
             for(int i=0;i<addTocart;i++) {
-                if (btnAddToCart.get(index).isDisplayed()){
-                    btnAddToCart.get(index).click();
+                if (btnAddToCart.get(i).isDisplayed()){
+                    btnAddToCart.get(i).click();
                     System.out.println("Add To cart Button is clicked and Product added to the cart.");
                     break;
                 }else {

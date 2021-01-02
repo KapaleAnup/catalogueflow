@@ -9,7 +9,7 @@
 
         <classes>
             <class name="com.qa.testcases.ProductSelectionFlowTests"></class>
-<!--            <class name="com.qa.testcases.CataloguePageTests"></class>-->
+            <class name="com.qa.testcases.SearchPageTests"></class>
         </classes>
     </test>
 </suite>

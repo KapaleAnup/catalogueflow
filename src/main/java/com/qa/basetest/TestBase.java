@@ -65,7 +65,7 @@ public class TestBase {
         }
         driver.manage().window().maximize();
         driver.get(Config.url);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @AfterMethod

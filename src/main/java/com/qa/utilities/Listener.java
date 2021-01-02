@@ -67,8 +67,8 @@ public class Listener implements ITestListener, IAnnotationTransformer {
 //    public void onFinish(ITestContext context) {
 //
 //    }
-    @Override
-    public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-        annotation.setRetryAnalyzer(RetryAnalyzer.class);
-    }
+//    @Override
+//    public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
+//        annotation.setRetryAnalyzer(RetryAnalyzer.class);
+//    }
 }
