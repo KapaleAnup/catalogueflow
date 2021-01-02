@@ -1,0 +1,593 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>API Execution Report</title>
+    <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+    <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+    <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/css/style.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+</style></head><script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="test-view -report dark">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+<div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">Automation Test Results</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">Jan 2, 2021 09:30:25 PM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+                                    <li class="user-profile dropdown dropdown-animated scale-left">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-exclamation-circle"></i>
+                                        </a>
+                                        <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+                                            <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
+	                                        <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
+	                                        
+	                                        
+	                                        
+	                                        
+	                                        <div class="dropdown-divider"></div>
+                                            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+                                        </ul>
+                                    </li>
+                                    <li class="user-profile dropdown dropdown-animated scale-left">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-user"></i>
+                                        </a>
+                                        <ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+                                                <a class="dropdown-item" href="#">AnupKapale</a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+                                    <li class="test-item"  status="pass" test-id="1"
+                                            author="AnupKapale"
+                                            tag=""
+                                            device="">
+                                        <div class="status-avatar pass-bg">
+                                            <i class="fa fa-check text-white"></i>
+                                        </div>
+                                        <div class="open-test">
+                                            <div class="test-detail"> 
+                                                <p class="name">TestHomePage</p> 
+                                                <p class="duration text-sm">0h 0m 4s+47ms</p> 
+                                                <span class="datetime">21:30:25 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="test-contents d-none">
+                                            <div class="detail-head">
+                                                <div class="p-v-10 d-inline-block"> 
+                                                    <div class="info">
+                                                        <h5 class="test-status text-pass">TestHomePage</h5>
+                                                        <span class='badge badge-success'>01.02.2021 21:30:25</span>
+                                                        <span class='badge badge-danger'>01.02.2021 21:30:29</span>
+                                                        <span class='badge badge-default'>0h 0m 4s+47ms</span>
+                                                    </div>
+                                                    <div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> AnupKapale</span>
+                                                    </div>
+                                                    <div class="m-t-10 m-l-5">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:29 PM</td>
+				<td>
+						Campany Name is :X Fashions
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:29 PM</td>
+				<td>
+						Total catalogue count is :7 catalogues
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:29 PM</td>
+				<td>
+						Total product count is :10 items
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:29 PM</td>
+				<td>
+						Catalogue title is :Premium Formal Shirts
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:29 PM</td>
+				<td>
+						The user is redirected to the catalogue/product selection page
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>9:30:29 PM</td>
+				<td>
+						Test case TestHomePage is passed
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+                                        </div>
+                                    </li>
+                                    <li class="test-item"  status="pass" test-id="2"
+                                            author="AnupKapale"
+                                            tag=""
+                                            device="">
+                                        <div class="status-avatar pass-bg">
+                                            <i class="fa fa-check text-white"></i>
+                                        </div>
+                                        <div class="open-test">
+                                            <div class="test-detail"> 
+                                                <p class="name">TestCatalogePage</p> 
+                                                <p class="duration text-sm">0h 0m 2s+0ms</p> 
+                                                <span class="datetime">21:30:30 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="test-contents d-none">
+                                            <div class="detail-head">
+                                                <div class="p-v-10 d-inline-block"> 
+                                                    <div class="info">
+                                                        <h5 class="test-status text-pass">TestCatalogePage</h5>
+                                                        <span class='badge badge-success'>01.02.2021 21:30:30</span>
+                                                        <span class='badge badge-danger'>01.02.2021 21:30:32</span>
+                                                        <span class='badge badge-default'>0h 0m 2s+0ms</span>
+                                                    </div>
+                                                    <div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> AnupKapale</span>
+                                                    </div>
+                                                    <div class="m-t-10 m-l-5">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:30 PM</td>
+				<td>
+						page title is :Premium Formal Shirts Showcase
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:30 PM</td>
+				<td>
+						Catalogue title is :Premium Formal Shirts
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:30 PM</td>
+				<td>
+						Catalogue count is :10 items
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:31 PM</td>
+				<td>
+						discount badge is :81% off
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:31 PM</td>
+				<td>
+						count of color is :8 colors
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:31 PM</td>
+				<td>
+						price is :250 gm
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:32 PM</td>
+				<td>
+						photo Count is :2 photos
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:32 PM</td>
+				<td>
+						The user is redirected to the product page
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>9:30:32 PM</td>
+				<td>
+						Test case TestCatalogePage is passed
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+                                        </div>
+                                    </li>
+                                    <li class="test-item"  status="pass" test-id="3"
+                                            author="AnupKapale"
+                                            tag=""
+                                            device="">
+                                        <div class="status-avatar pass-bg">
+                                            <i class="fa fa-check text-white"></i>
+                                        </div>
+                                        <div class="open-test">
+                                            <div class="test-detail"> 
+                                                <p class="name">TestProductPage</p> 
+                                                <p class="duration text-sm">0h 0m 4s+200ms</p> 
+                                                <span class="datetime">21:30:32 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="test-contents d-none">
+                                            <div class="detail-head">
+                                                <div class="p-v-10 d-inline-block"> 
+                                                    <div class="info">
+                                                        <h5 class="test-status text-pass">TestProductPage</h5>
+                                                        <span class='badge badge-success'>01.02.2021 21:30:32</span>
+                                                        <span class='badge badge-danger'>01.02.2021 21:30:37</span>
+                                                        <span class='badge badge-default'>0h 0m 4s+200ms</span>
+                                                    </div>
+                                                    <div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> AnupKapale</span>
+                                                    </div>
+                                                    <div class="m-t-10 m-l-5">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:32 PM</td>
+				<td>
+						Product color is :Yellow
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:32 PM</td>
+				<td>
+						Product Size is :38
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:33 PM</td>
+				<td>
+						add to Cart button clicked
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:33 PM</td>
+				<td>
+						Provided mobile Number is:9999999999
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:33 PM</td>
+				<td>
+						Mobile number is added.
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:36 PM</td>
+				<td>
+						Cart Count is :1
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						The user redirected to the review page
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						Test case TestProductPage is passed
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+                                        </div>
+                                    </li>
+                                    <li class="test-item"  status="fail" test-id="4"
+                                            author="AnupKapale"
+                                            tag=""
+                                            device="">
+                                        <div class="status-avatar fail-bg">
+                                            <i class="fa fa-times text-white"></i>
+                                        </div>
+                                        <div class="open-test">
+                                            <div class="test-detail"> 
+                                                <p class="name">TestReviewPage</p> 
+                                                <p class="duration text-sm">0h 0m 0s+312ms</p> 
+                                                <span class="datetime">21:30:37 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="test-contents d-none">
+                                            <div class="detail-head">
+                                                <div class="p-v-10 d-inline-block"> 
+                                                    <div class="info">
+                                                        <h5 class="test-status text-fail">TestReviewPage</h5>
+                                                        <span class='badge badge-success'>01.02.2021 21:30:37</span>
+                                                        <span class='badge badge-danger'>01.02.2021 21:30:37</span>
+                                                        <span class='badge badge-default'>0h 0m 0s+312ms</span>
+                                                    </div>
+                                                    <div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> AnupKapale</span>
+                                                    </div>
+                                                    <div class="m-t-10 m-l-5">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						Review Title :Review
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						order Title :Your order items
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						Review Product name is :Premium Formal Shirt
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						Review Product color is :Yellow
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						Review Product Size is :38
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						Review Product discounted price is :(80.75% off)
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>9:30:37 PM</td>
+				<td>
+						Test case TestReviewPage is Failed Discount price is mismatched. expected [81% off] but found [(80.75% off)]
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+                                        </div>
+                                    </li>
+                                    <li class="test-item"  status="fail" test-id="5"
+                                            author="AnupKapale"
+                                            tag=""
+                                            device="">
+                                        <div class="status-avatar fail-bg">
+                                            <i class="fa fa-times text-white"></i>
+                                        </div>
+                                        <div class="open-test">
+                                            <div class="test-detail"> 
+                                                <p class="name">TestSearch</p> 
+                                                <p class="duration text-sm">0h 1m 1s+495ms</p> 
+                                                <span class="datetime">21:30:45 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="test-contents d-none">
+                                            <div class="detail-head">
+                                                <div class="p-v-10 d-inline-block"> 
+                                                    <div class="info">
+                                                        <h5 class="test-status text-fail">TestSearch</h5>
+                                                        <span class='badge badge-success'>01.02.2021 21:30:45</span>
+                                                        <span class='badge badge-danger'>01.02.2021 21:31:46</span>
+                                                        <span class='badge badge-default'>0h 1m 1s+495ms</span>
+                                                    </div>
+                                                    <div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-user-o"></i> AnupKapale</span>
+                                                    </div>
+                                                    <div class="m-t-10 m-l-5">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+<div class="detail-body mt-4">                                              
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>9:30:46 PM</td>
+				<td>
+						searched data : Premium Formal Shirts
+				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>9:31:46 PM</td>
+				<td>
+						Test case TestSearch is Failed Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='no-search-results']' (tried for 20 second(s) with 500 milliseconds interval)
+				</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/24cb10e/spark/js/script.js"></script>
+</body>
+</html>

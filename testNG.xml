@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Catalogue AUTOMATION" parallel="false">
-
+    <listeners>
+        <listener class-name="com.qa.utilities.Listener"></listener>
+    </listeners>
     <test name="Catalogue Project">
         <parameter name="browser" value="chrome"/>
 
         <classes>
-
+            <class name="com.qa.testcases.ProductSelectionFlowTests"></class>
+            <class name="com.qa.testcases.SearchPageTests"></class>
         </classes>
     </test>
 </suite>
